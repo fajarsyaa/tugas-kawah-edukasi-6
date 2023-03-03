@@ -4,6 +4,57 @@ This project uses Quarkus, the Supersonic Subatomic Java Framework.
 
 If you want to learn more about Quarkus, please visit its website: https://quarkus.io/ .
 
+## API test in POSTMAN
+
+1. get all list data
+   use method GET
+```shell script
+  http://localhost:8080/product
+```
+
+2. create a new data
+   use method POST
+```shell script
+  http://localhost:8080/product
+  
+  send data in body raw json : 
+  {
+    "product_name":"your product",
+    "merk":"jarss",               // default "no merk"
+    "description":"description",  // default "no description"
+    "category":"category",        // default "no category"
+    "price":2000000,              // default 0
+    "quantity":19                 // default 0
+}
+```
+3. read specific data
+   use method GET
+```shell script
+  http://localhost:8080/product/{product_name}
+```
+
+4. update data
+   use method PUT
+```shell script
+  http://localhost:8080/product/{product_name}
+  
+  send data in body raw json : 
+  {
+    "product_name":"your product",
+    "merk":"jarss",               // default "no merk"
+    "description":"description",  // default "no description"
+    "category":"category",        // default "no category"
+    "price":2000000,              // default 0
+    "quantity":19                 // default 0
+}
+```
+
+5. delete data
+   use method DELETE
+```shell script
+  http://localhost:8080/product/{product_name}
+```
+
 ## Running the application in dev mode
 
 You can run your application in dev mode that enables live coding using:
